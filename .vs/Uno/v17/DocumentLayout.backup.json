@@ -7,12 +7,16 @@
       "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|c:\\users\\kaique\\source\\repos\\uno\\uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|c:\\users\\kaique\\source\\repos\\uno\\uno\\classes\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\classes\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|C:\\Users\\Kaique\\source\\repos\\Uno\\uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|c:\\users\\kaique\\source\\repos\\uno\\uno\\curingamaisquatro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\curingamaisquatro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,7 +34,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "CuringaMaisQuatro.cs [Projeto]",
+              "DocumentMoniker": "C:\\Users\\Kaique\\source\\repos\\Uno\\Uno\\CuringaMaisQuatro.cs",
+              "RelativeDocumentMoniker": "Uno\\CuringaMaisQuatro.cs",
+              "ToolTip": "C:\\Users\\Kaique\\source\\repos\\Uno\\Uno\\CuringaMaisQuatro.cs [Projeto]",
+              "RelativeToolTip": "Uno\\CuringaMaisQuatro.cs [Projeto]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T15:14:40.314Z",
+              "EditorCaption": " [Projeto]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\Kaique\\source\\repos\\Uno\\Uno\\Classes\\Card.cs",
               "RelativeDocumentMoniker": "Uno\\Classes\\Card.cs",
@@ -43,7 +59,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Uno.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Kaique\\source\\repos\\Uno\\Uno\\Uno.cs",
               "RelativeDocumentMoniker": "Uno\\Uno.cs",
@@ -61,7 +77,7 @@
               "RelativeDocumentMoniker": "Uno\\Uno.cs",
               "ToolTip": "C:\\Users\\Kaique\\source\\repos\\Uno\\Uno\\Uno.cs",
               "RelativeToolTip": "Uno\\Uno.cs",
-              "ViewState": "AgIAAM8AAAAAAAAAAAAgwOcAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAJcCAAAAAAAAAAAowLECAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T02:54:36.665Z",
               "EditorCaption": ""

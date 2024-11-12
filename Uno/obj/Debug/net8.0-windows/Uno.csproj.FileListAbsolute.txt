@@ -18,3 +18,5 @@ C:\Users\Kaique\source\repos\Uno\Uno\obj\Debug\net8.0-windows\ref\Uno.dll
 C:\Users\Kaique\source\repos\Uno\Uno\obj\Debug\net8.0-windows\Uno.Properties.Resources.resources
 C:\Users\Kaique\source\repos\Uno\Uno\bin\Debug\net8.0-windows\Images\carol.png
 C:\Users\Kaique\source\repos\Uno\Uno\bin\Debug\net8.0-windows\Images\kaique.png
+C:\Users\Kaique\source\repos\Uno\Uno\obj\Debug\net8.0-windows\Uno.sourcelink.json
+C:\Users\Kaique\source\repos\Uno\Uno\obj\Debug\net8.0-windows\Uno.CuringaMaisQuatro.resources

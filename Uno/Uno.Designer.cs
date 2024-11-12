@@ -68,7 +68,7 @@
             pbCard30Player2 = new PictureBox();
             panel1 = new Panel();
             pbMonteDescarte = new PictureBox();
-            pictureBox2 = new PictureBox();
+            pbMonteCompras = new PictureBox();
             tableLayoutPanel3 = new TableLayoutPanel();
             pbCard15Player1 = new PictureBox();
             pbCard14Player1 = new PictureBox();
@@ -100,6 +100,7 @@
             pbCard28Player1 = new PictureBox();
             pbCard29Player1 = new PictureBox();
             pbCard30Player1 = new PictureBox();
+            btnPassaVez = new Button();
             ((System.ComponentModel.ISupportInitialize)pbAvatar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbAvatar2).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -137,7 +138,7 @@
             ((System.ComponentModel.ISupportInitialize)pbCard30Player2).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbMonteDescarte).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbMonteCompras).BeginInit();
             tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbCard15Player1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbCard14Player1).BeginInit();
@@ -320,6 +321,7 @@
             pbCard15Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard15Player2.TabIndex = 14;
             pbCard15Player2.TabStop = false;
+            pbCard15Player2.Visible = false;
             // 
             // pbCard13Player2
             // 
@@ -330,6 +332,7 @@
             pbCard13Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard13Player2.TabIndex = 13;
             pbCard13Player2.TabStop = false;
+            pbCard13Player2.Visible = false;
             // 
             // pbCard11Player2
             // 
@@ -340,6 +343,7 @@
             pbCard11Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard11Player2.TabIndex = 12;
             pbCard11Player2.TabStop = false;
+            pbCard11Player2.Visible = false;
             // 
             // pbCard9Player2
             // 
@@ -350,6 +354,7 @@
             pbCard9Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard9Player2.TabIndex = 11;
             pbCard9Player2.TabStop = false;
+            pbCard9Player2.Visible = false;
             // 
             // pbCard7Player2
             // 
@@ -428,6 +433,7 @@
             pbCard8Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard8Player2.TabIndex = 2;
             pbCard8Player2.TabStop = false;
+            pbCard8Player2.Visible = false;
             // 
             // pbCard10Player2
             // 
@@ -437,6 +443,7 @@
             pbCard10Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard10Player2.TabIndex = 4;
             pbCard10Player2.TabStop = false;
+            pbCard10Player2.Visible = false;
             // 
             // pbCard12Player2
             // 
@@ -446,6 +453,7 @@
             pbCard12Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard12Player2.TabIndex = 5;
             pbCard12Player2.TabStop = false;
+            pbCard12Player2.Visible = false;
             // 
             // pbCard14Player2
             // 
@@ -455,6 +463,7 @@
             pbCard14Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard14Player2.TabIndex = 6;
             pbCard14Player2.TabStop = false;
+            pbCard14Player2.Visible = false;
             // 
             // pbCard16Player2
             // 
@@ -464,6 +473,7 @@
             pbCard16Player2.Size = new Size(45, 68);
             pbCard16Player2.TabIndex = 15;
             pbCard16Player2.TabStop = false;
+            pbCard16Player2.Visible = false;
             // 
             // pbCard17Player2
             // 
@@ -473,6 +483,7 @@
             pbCard17Player2.Size = new Size(45, 68);
             pbCard17Player2.TabIndex = 16;
             pbCard17Player2.TabStop = false;
+            pbCard17Player2.Visible = false;
             // 
             // pbCard18Player2
             // 
@@ -482,6 +493,7 @@
             pbCard18Player2.Size = new Size(45, 68);
             pbCard18Player2.TabIndex = 17;
             pbCard18Player2.TabStop = false;
+            pbCard18Player2.Visible = false;
             // 
             // pbCard19Player2
             // 
@@ -491,6 +503,7 @@
             pbCard19Player2.Size = new Size(45, 68);
             pbCard19Player2.TabIndex = 18;
             pbCard19Player2.TabStop = false;
+            pbCard19Player2.Visible = false;
             // 
             // pbCard20Player2
             // 
@@ -500,6 +513,7 @@
             pbCard20Player2.Size = new Size(45, 68);
             pbCard20Player2.TabIndex = 19;
             pbCard20Player2.TabStop = false;
+            pbCard20Player2.Visible = false;
             // 
             // pbCard21Player2
             // 
@@ -509,6 +523,7 @@
             pbCard21Player2.Size = new Size(45, 68);
             pbCard21Player2.TabIndex = 20;
             pbCard21Player2.TabStop = false;
+            pbCard21Player2.Visible = false;
             // 
             // pbCard22Player2
             // 
@@ -518,6 +533,7 @@
             pbCard22Player2.Size = new Size(45, 68);
             pbCard22Player2.TabIndex = 21;
             pbCard22Player2.TabStop = false;
+            pbCard22Player2.Visible = false;
             // 
             // pbCard23Player2
             // 
@@ -527,6 +543,7 @@
             pbCard23Player2.Size = new Size(45, 68);
             pbCard23Player2.TabIndex = 22;
             pbCard23Player2.TabStop = false;
+            pbCard23Player2.Visible = false;
             // 
             // pbCard24Player2
             // 
@@ -536,6 +553,7 @@
             pbCard24Player2.Size = new Size(45, 68);
             pbCard24Player2.TabIndex = 23;
             pbCard24Player2.TabStop = false;
+            pbCard24Player2.Visible = false;
             // 
             // pbCard25Player2
             // 
@@ -545,6 +563,7 @@
             pbCard25Player2.Size = new Size(45, 68);
             pbCard25Player2.TabIndex = 24;
             pbCard25Player2.TabStop = false;
+            pbCard25Player2.Visible = false;
             // 
             // pbCard26Player2
             // 
@@ -554,6 +573,7 @@
             pbCard26Player2.Size = new Size(45, 68);
             pbCard26Player2.TabIndex = 25;
             pbCard26Player2.TabStop = false;
+            pbCard26Player2.Visible = false;
             // 
             // pbCard27Player2
             // 
@@ -563,6 +583,7 @@
             pbCard27Player2.Size = new Size(45, 68);
             pbCard27Player2.TabIndex = 26;
             pbCard27Player2.TabStop = false;
+            pbCard27Player2.Visible = false;
             // 
             // pbCard28Player2
             // 
@@ -572,6 +593,7 @@
             pbCard28Player2.Size = new Size(45, 68);
             pbCard28Player2.TabIndex = 27;
             pbCard28Player2.TabStop = false;
+            pbCard28Player2.Visible = false;
             // 
             // pbCard29Player2
             // 
@@ -581,6 +603,7 @@
             pbCard29Player2.Size = new Size(45, 68);
             pbCard29Player2.TabIndex = 28;
             pbCard29Player2.TabStop = false;
+            pbCard29Player2.Visible = false;
             // 
             // pbCard30Player2
             // 
@@ -590,11 +613,13 @@
             pbCard30Player2.Size = new Size(45, 68);
             pbCard30Player2.TabIndex = 29;
             pbCard30Player2.TabStop = false;
+            pbCard30Player2.Visible = false;
             // 
             // panel1
             // 
+            panel1.Controls.Add(btnPassaVez);
             panel1.Controls.Add(pbMonteDescarte);
-            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(pbMonteCompras);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(293, 157);
             panel1.Name = "panel1";
@@ -609,14 +634,17 @@
             pbMonteDescarte.SizeMode = PictureBoxSizeMode.Zoom;
             pbMonteDescarte.TabIndex = 6;
             pbMonteDescarte.TabStop = false;
+            pbMonteDescarte.Click += pbMonteDescarte_Click;
             // 
-            // pictureBox2
+            // pbMonteCompras
             // 
-            pictureBox2.Location = new Point(98, 108);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(103, 114);
-            pictureBox2.TabIndex = 5;
-            pictureBox2.TabStop = false;
+            pbMonteCompras.BorderStyle = BorderStyle.FixedSingle;
+            pbMonteCompras.Location = new Point(98, 108);
+            pbMonteCompras.Name = "pbMonteCompras";
+            pbMonteCompras.Size = new Size(103, 114);
+            pbMonteCompras.TabIndex = 5;
+            pbMonteCompras.TabStop = false;
+            pbMonteCompras.Click += pictureBox2_Click;
             // 
             // tableLayoutPanel3
             // 
@@ -685,6 +713,7 @@
             pbCard15Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard15Player1.TabIndex = 14;
             pbCard15Player1.TabStop = false;
+            pbCard15Player1.Visible = false;
             // 
             // pbCard14Player1
             // 
@@ -695,6 +724,7 @@
             pbCard14Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard14Player1.TabIndex = 13;
             pbCard14Player1.TabStop = false;
+            pbCard14Player1.Visible = false;
             // 
             // pbCard13Player1
             // 
@@ -705,6 +735,7 @@
             pbCard13Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard13Player1.TabIndex = 12;
             pbCard13Player1.TabStop = false;
+            pbCard13Player1.Visible = false;
             // 
             // pbCard12Player1
             // 
@@ -715,6 +746,7 @@
             pbCard12Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard12Player1.TabIndex = 11;
             pbCard12Player1.TabStop = false;
+            pbCard12Player1.Visible = false;
             // 
             // pbCard11Player1
             // 
@@ -725,6 +757,7 @@
             pbCard11Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard11Player1.TabIndex = 10;
             pbCard11Player1.TabStop = false;
+            pbCard11Player1.Visible = false;
             // 
             // pbCard10Player1
             // 
@@ -735,6 +768,7 @@
             pbCard10Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard10Player1.TabIndex = 9;
             pbCard10Player1.TabStop = false;
+            pbCard10Player1.Visible = false;
             // 
             // pbCard9Player1
             // 
@@ -745,6 +779,7 @@
             pbCard9Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard9Player1.TabIndex = 8;
             pbCard9Player1.TabStop = false;
+            pbCard9Player1.Visible = false;
             // 
             // pbCard8Player1
             // 
@@ -755,6 +790,7 @@
             pbCard8Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard8Player1.TabIndex = 7;
             pbCard8Player1.TabStop = false;
+            pbCard8Player1.Visible = false;
             // 
             // pbCard7Player1
             // 
@@ -825,6 +861,7 @@
             pbCard1Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard1Player1.TabIndex = 0;
             pbCard1Player1.TabStop = false;
+            pbCard1Player1.Click += pbCard1Player1_Click;
             // 
             // pbCard16Player1
             // 
@@ -835,6 +872,7 @@
             pbCard16Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard16Player1.TabIndex = 15;
             pbCard16Player1.TabStop = false;
+            pbCard16Player1.Visible = false;
             // 
             // pbCard17Player1
             // 
@@ -845,6 +883,7 @@
             pbCard17Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard17Player1.TabIndex = 16;
             pbCard17Player1.TabStop = false;
+            pbCard17Player1.Visible = false;
             // 
             // pbCard18Player1
             // 
@@ -855,6 +894,7 @@
             pbCard18Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard18Player1.TabIndex = 17;
             pbCard18Player1.TabStop = false;
+            pbCard18Player1.Visible = false;
             // 
             // pbCard19Player1
             // 
@@ -865,6 +905,7 @@
             pbCard19Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard19Player1.TabIndex = 18;
             pbCard19Player1.TabStop = false;
+            pbCard19Player1.Visible = false;
             // 
             // pbCard20Player1
             // 
@@ -875,6 +916,7 @@
             pbCard20Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard20Player1.TabIndex = 19;
             pbCard20Player1.TabStop = false;
+            pbCard20Player1.Visible = false;
             // 
             // pbCard21Player1
             // 
@@ -885,6 +927,7 @@
             pbCard21Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard21Player1.TabIndex = 20;
             pbCard21Player1.TabStop = false;
+            pbCard21Player1.Visible = false;
             // 
             // pbCard22Player1
             // 
@@ -895,6 +938,7 @@
             pbCard22Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard22Player1.TabIndex = 21;
             pbCard22Player1.TabStop = false;
+            pbCard22Player1.Visible = false;
             // 
             // pbCard23Player1
             // 
@@ -905,6 +949,7 @@
             pbCard23Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard23Player1.TabIndex = 22;
             pbCard23Player1.TabStop = false;
+            pbCard23Player1.Visible = false;
             // 
             // pbCard24Player1
             // 
@@ -915,6 +960,7 @@
             pbCard24Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard24Player1.TabIndex = 23;
             pbCard24Player1.TabStop = false;
+            pbCard24Player1.Visible = false;
             // 
             // pbCard25Player1
             // 
@@ -925,6 +971,7 @@
             pbCard25Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard25Player1.TabIndex = 24;
             pbCard25Player1.TabStop = false;
+            pbCard25Player1.Visible = false;
             // 
             // pbCard26Player1
             // 
@@ -935,6 +982,7 @@
             pbCard26Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard26Player1.TabIndex = 25;
             pbCard26Player1.TabStop = false;
+            pbCard26Player1.Visible = false;
             // 
             // pbCard27Player1
             // 
@@ -945,6 +993,7 @@
             pbCard27Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard27Player1.TabIndex = 26;
             pbCard27Player1.TabStop = false;
+            pbCard27Player1.Visible = false;
             // 
             // pbCard28Player1
             // 
@@ -955,6 +1004,7 @@
             pbCard28Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard28Player1.TabIndex = 27;
             pbCard28Player1.TabStop = false;
+            pbCard28Player1.Visible = false;
             // 
             // pbCard29Player1
             // 
@@ -965,6 +1015,7 @@
             pbCard29Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard29Player1.TabIndex = 28;
             pbCard29Player1.TabStop = false;
+            pbCard29Player1.Visible = false;
             // 
             // pbCard30Player1
             // 
@@ -975,6 +1026,17 @@
             pbCard30Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard30Player1.TabIndex = 29;
             pbCard30Player1.TabStop = false;
+            pbCard30Player1.Visible = false;
+            // 
+            // btnPassaVez
+            // 
+            btnPassaVez.Location = new Point(564, 34);
+            btnPassaVez.Name = "btnPassaVez";
+            btnPassaVez.Size = new Size(75, 23);
+            btnPassaVez.TabIndex = 7;
+            btnPassaVez.Text = "Passar Vez";
+            btnPassaVez.UseVisualStyleBackColor = true;
+            btnPassaVez.Click += btnPassaVez_Click;
             // 
             // Uno
             // 
@@ -1026,7 +1088,7 @@
             ((System.ComponentModel.ISupportInitialize)pbCard30Player2).EndInit();
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbMonteDescarte).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbMonteCompras).EndInit();
             tableLayoutPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pbCard15Player1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbCard14Player1).EndInit();
@@ -1102,7 +1164,7 @@
         private PictureBox pbCard30Player2;
         private Panel panel1;
         private PictureBox pbMonteDescarte;
-        private PictureBox pictureBox2;
+        private PictureBox pbMonteCompras;
         private TableLayoutPanel tableLayoutPanel3;
         private PictureBox pbCard15Player1;
         private PictureBox pbCard14Player1;
@@ -1134,5 +1196,6 @@
         private PictureBox pbCard28Player1;
         private PictureBox pbCard29Player1;
         private PictureBox pbCard30Player1;
+        private Button btnPassaVez;
     }
 }

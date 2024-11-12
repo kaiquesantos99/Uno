@@ -13,22 +13,33 @@ namespace Uno
 {
     public partial class Uno : Form
     {
-        List<Card> cartas = new List<Card>();
+        List<Card> cartas = new List<Card>(); // Lista com todas as 108 cartas disponíveis no jogo
 
         List<Card> cartasPlayer1 = new List<Card>(); // Lista de cartas do jogador 1
         List<Card> cartasPlayer2 = new List<Card>(); // Lista de cartas do jogador 2
+
+        List<PictureBox> espacosPlayer1 = new List<PictureBox>(); // Lista de espaços na mesa jogador 1
+        List<PictureBox> espacosPlayer2 = new List<PictureBox>(); // Lista de espaços na mesa jogador 2
 
 
         // Atributos da partida
         private int valorCartaAtual;
         private string corCartaAtual;
-        private bool vezPlayer1;
+        private bool vezPlayer1 = true;
+        private bool primeiraJogada = true;
+        private bool fimRodada = false;
+        private bool fimPartida = false;
+
+        private int valorCartaComprada = 11; // 11 é o valor nulo
+        private string corCartaComprada;
 
         // Atributos jogador 1
         private int qtdCartasPlayer1 = 7;
+        private bool comprouPlayer1 = false;
 
         // Atributos jogador 2
         private int qtdCartasPlayer2 = 7;
+        private bool comprouPlayer2 = false;
 
         public Uno(DadosPlayer d)
         {
@@ -117,6 +128,69 @@ namespace Uno
             Card curingaMaisQuatro = new Card { Cor = "Nulo", Valor = 44, Imagem = Properties.Resources.curinga_mais_4 }; cartas.Add(curingaMaisQuatro); cartas.Add(curingaMaisQuatro); cartas.Add(curingaMaisQuatro); cartas.Add(curingaMaisQuatro); // 4 curinga +4
 
 
+            // Adiciona todos os espaços da mesa do player 1 na lista de espaços
+            espacosPlayer1.Add(pbCard1Player1);
+            espacosPlayer1.Add(pbCard2Player1);
+            espacosPlayer1.Add(pbCard3Player1);
+            espacosPlayer1.Add(pbCard4Player1);
+            espacosPlayer1.Add(pbCard5Player1);
+            espacosPlayer1.Add(pbCard6Player1);
+            espacosPlayer1.Add(pbCard7Player1);
+            espacosPlayer1.Add(pbCard8Player1);
+            espacosPlayer1.Add(pbCard9Player1);
+            espacosPlayer1.Add(pbCard10Player1);
+            espacosPlayer1.Add(pbCard11Player1);
+            espacosPlayer1.Add(pbCard12Player1);
+            espacosPlayer1.Add(pbCard13Player1);
+            espacosPlayer1.Add(pbCard14Player1);
+            espacosPlayer1.Add(pbCard15Player1);
+            espacosPlayer1.Add(pbCard16Player1);
+            espacosPlayer1.Add(pbCard17Player1);
+            espacosPlayer1.Add(pbCard18Player1);
+            espacosPlayer1.Add(pbCard19Player1);
+            espacosPlayer1.Add(pbCard20Player1);
+            espacosPlayer1.Add(pbCard21Player1);
+            espacosPlayer1.Add(pbCard22Player1);
+            espacosPlayer1.Add(pbCard23Player1);
+            espacosPlayer1.Add(pbCard24Player1);
+            espacosPlayer1.Add(pbCard25Player1);
+            espacosPlayer1.Add(pbCard26Player1);
+            espacosPlayer1.Add(pbCard27Player1);
+            espacosPlayer1.Add(pbCard28Player1);
+            espacosPlayer1.Add(pbCard29Player1);
+            espacosPlayer1.Add(pbCard30Player1);
+
+            // Adiciona todos os espaços da mesa do player 2 na lista de espaços
+            espacosPlayer2.Add(pbCard1Player2);
+            espacosPlayer2.Add(pbCard2Player2);
+            espacosPlayer2.Add(pbCard3Player2);
+            espacosPlayer2.Add(pbCard4Player2);
+            espacosPlayer2.Add(pbCard5Player2);
+            espacosPlayer2.Add(pbCard6Player2);
+            espacosPlayer2.Add(pbCard7Player2);
+            espacosPlayer2.Add(pbCard8Player2);
+            espacosPlayer2.Add(pbCard9Player2);
+            espacosPlayer2.Add(pbCard10Player2);
+            espacosPlayer2.Add(pbCard11Player2);
+            espacosPlayer2.Add(pbCard12Player2);
+            espacosPlayer2.Add(pbCard13Player2);
+            espacosPlayer2.Add(pbCard14Player2);
+            espacosPlayer2.Add(pbCard15Player2);
+            espacosPlayer2.Add(pbCard16Player2);
+            espacosPlayer2.Add(pbCard17Player2);
+            espacosPlayer2.Add(pbCard18Player2);
+            espacosPlayer2.Add(pbCard19Player2);
+            espacosPlayer2.Add(pbCard20Player2);
+            espacosPlayer2.Add(pbCard21Player2);
+            espacosPlayer2.Add(pbCard22Player2);
+            espacosPlayer2.Add(pbCard23Player2);
+            espacosPlayer2.Add(pbCard24Player2);
+            espacosPlayer2.Add(pbCard25Player2);
+            espacosPlayer2.Add(pbCard26Player2);
+            espacosPlayer2.Add(pbCard27Player2);
+            espacosPlayer2.Add(pbCard28Player2);
+            espacosPlayer2.Add(pbCard29Player2);
+            espacosPlayer2.Add(pbCard30Player2);
 
 
             // PLAYER 1
@@ -211,27 +285,628 @@ namespace Uno
 
         private void pbCard1Player2_Click(object sender, EventArgs e)
         {
-            if (cartasPlayer2[0].Valor == valorCartaAtual || cartasPlayer2[0].Cor == corCartaAtual)
+
+            if (!fimRodada)
             {
-                pbMonteDescarte.Image = cartasPlayer2[0].Imagem;
-                valorCartaAtual = cartasPlayer2[0].Valor;
-                corCartaAtual = cartasPlayer2[0].Cor;
-                cartasPlayer2.RemoveAt(0);
-
-                pbCard1Player2.Image = null;
-                pbCard1Player2.Visible = false;
-
-                qtdCartasPlayer2--;
-
-                if (qtdCartasPlayer2 == 0)
+                if (!vezPlayer1)
                 {
-                    MessageBox.Show("Fim de jogo!");
+                    if (comprouPlayer1) // Se o jogador 1 tiver comprado
+                    {
+                        MessageBox.Show("O jogador 1 deve jogar ou passar a vez!");
+                    }
+                    else if (comprouPlayer2) // Se o jogador 2 (este jogador) tiver comprado
+                    {
+                        if (cartasPlayer2[0].Valor == valorCartaComprada && cartasPlayer2[0].Cor == corCartaComprada) // Verifica se esta carta é a carta comprada do monte de compras
+                        {
+                            if (cartasPlayer2[0].Valor == valorCartaAtual || cartasPlayer2[0].Cor == corCartaAtual) // Verifica se esta carta bate com a carta do monte de descarte
+                            {
+                                pbMonteDescarte.Image = cartasPlayer2[0].Imagem;
+                                valorCartaAtual = cartasPlayer2[0].Valor;
+                                corCartaAtual = cartasPlayer2[0].Cor;
+                                cartasPlayer2.RemoveAt(0);
+
+                                pbCard1Player2.Image = null;
+                                pbCard1Player2.Visible = false;
+
+                                qtdCartasPlayer2--;
+
+                                vezPlayer1 = true;
+
+                                if (qtdCartasPlayer2 == 0)
+                                {
+                                    MessageBox.Show("Fim de jogo!");
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Você não pode jogar esta carta!");
+                            }
+                        }
+                    }
+                    else // Se nenhum jogador tiver feito compras
+                    {
+                        if (cartasPlayer2[0].Valor == valorCartaAtual || cartasPlayer2[0].Cor == corCartaAtual)
+                        {
+                            pbMonteDescarte.Image = cartasPlayer2[0].Imagem;
+                            valorCartaAtual = cartasPlayer2[0].Valor;
+                            corCartaAtual = cartasPlayer2[0].Cor;
+                            cartasPlayer2.RemoveAt(0);
+
+                            pbCard1Player2.Image = null;
+                            pbCard1Player2.Visible = false;
+
+                            qtdCartasPlayer2--;
+
+                            vezPlayer1 = true;
+
+                            if (qtdCartasPlayer2 == 0)
+                            {
+                                MessageBox.Show("Fim de jogo!");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Você não pode jogar esta carta!");
+                        }
+                    }
+
                 }
             }
-            else
+
+
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e) // Monte de compras
+        {
+            if (!fimRodada) // Se a partida não tiver acabado
             {
-                MessageBox.Show("Você não pode jogar esta carta!");
+                if (!primeiraJogada) // Se não for a primeira jogada
+                {
+                    if (vezPlayer1) // Se for a vez do player 1
+                    {
+                        if (!comprouPlayer1) // Se não comprou carta ainda
+                        {
+                            for (int c = 0; c < espacosPlayer1.Count; c++) // Procura por espaços vazios na mesa do player 1
+                            {
+                                if (!espacosPlayer1[c].Visible) // Se o espaço na posição estiver vazio
+                                {
+                                    espacosPlayer1[c].Visible = true;
+
+                                    Random random = new Random();
+                                    int aleatorio = (int)random.NextInt64(0, cartas.Count - 1);
+                                    espacosPlayer1[c].Image = cartas[aleatorio].Imagem; // Uma carta aleatória é inserida naquele espaço vazio
+                                    espacosPlayer1[c].Visible = true; // Torna visivel o espaço alugado para colocar carta na mesa
+
+                                    if (c > cartasPlayer1.Count - 1) // Adiciona em um novo espaço na mesa
+                                    {
+                                        cartasPlayer1.Add(cartas[aleatorio]);
+                                    }
+                                    else // Adiciona em uma posição vazia da mesa que não seja uma depois da ultima
+                                    {
+                                        cartasPlayer1[c] = cartas[aleatorio];
+                                    }
+
+
+                                    valorCartaComprada = cartas[aleatorio].Valor;
+                                    corCartaComprada = cartas[aleatorio].Cor;
+                                    cartas.RemoveAt(aleatorio);
+
+                                    comprouPlayer1 = true;
+                                    comprouPlayer2 = false;
+
+                                    qtdCartasPlayer1++;
+
+                                    break;
+                                }
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Você não pode comprar mais de uma carta!");
+                        }
+
+
+                    }
+                    else // Se for a vez do player 2
+                    {
+                        if (!comprouPlayer2) // Se não comprou carta ainda
+                        {
+                            for (int c = 0; c < espacosPlayer2.Count; c++) // Procura por espaços vazios na mesa do player 1
+                            {
+                                if (!espacosPlayer2[c].Visible) // Se o espaço na posição estiver vazio
+                                {
+                                    espacosPlayer2[c].Visible = true;
+
+                                    Random random = new Random();
+                                    int aleatorio = (int)random.NextInt64(0, cartas.Count - 1);
+                                    espacosPlayer2[c].Image = cartas[aleatorio].Imagem; // Uma carta aleatória é inserida naquele espaço vazio
+                                    espacosPlayer2[c].Visible = true; // Torna visivel o espaço alugado para colocar carta na mesa
+
+                                    if (c > cartasPlayer2.Count - 1) // Adiciona em um novo espaço na mesa
+                                    {
+                                        cartasPlayer2.Add(cartas[aleatorio]);
+                                    }
+                                    else // Adiciona em uma posição vazia da mesa que não seja uma depois da ultima
+                                    {
+                                        cartasPlayer2[c] = cartas[aleatorio];
+                                    }
+
+
+                                    valorCartaComprada = cartas[aleatorio].Valor;
+                                    corCartaComprada = cartas[aleatorio].Cor;
+                                    cartas.RemoveAt(aleatorio);
+
+                                    comprouPlayer2 = true;
+                                    comprouPlayer1 = false;
+
+                                    qtdCartasPlayer2++;
+
+                                    break;
+                                }
+                            }
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Você não pode comprar mais de uma carta!");
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Como você irá dar início a partida, você não pode comprar de imediato!");
+                }
+
             }
+
+
+        }
+
+        private void pbMonteDescarte_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbCard1Player1_Click(object sender, EventArgs e)
+        {
+            if (!fimRodada)
+            {
+                if (vezPlayer1)
+                {
+                    if (comprouPlayer2) // SE O JOGADOR 2 TIVER COMPRADO
+                    {
+                        MessageBox.Show("O jogador 2 deve jogar a carta comprada ou passar a vez!");
+                    }
+                    else if (comprouPlayer1) // SE O JOGADOR 1 TIVER COMPRADO
+                    {
+                        if (cartasPlayer1[0].Valor == valorCartaComprada && cartasPlayer1[0].Cor == corCartaComprada) // Verifica se esta carta é a carta comprada do monte de compras
+                        {
+                            // Verifica se a carta é curinga antes de verificar a cor e o valor
+                            if (cartasPlayer1[0].Valor == 44) // Se for curinga +4
+                            {
+                                bool verificarCuringaMais4 = false;
+                                for (int c = 0; c <= cartasPlayer1.Count - 1; c++) // Verificar se tenho uma carta da mesma cor da carta do monte de descarte
+                                {
+                                    if (cartasPlayer1[c].Cor == corCartaAtual) // Se a cor da carta que tenho for igual a carta do monte
+                                    {
+                                        verificarCuringaMais4 = true;
+                                        break;
+                                    }
+                                }
+
+                                if (verificarCuringaMais4) // Se tiver carta de mesma cor do monte, não posso jogar
+                                {
+                                    MessageBox.Show("Você não pode jogar esta carta agora!");
+                                }
+                                else // Se não tiver carta de mesma cor, posso jogar, o adversario perde a vez e ganha 4 cartas
+                                {
+
+                                    // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                    pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                    cartasPlayer1.RemoveAt(0);
+
+                                    pbCard1Player1.Image = null;
+                                    pbCard1Player1.Visible = false;
+
+                                    qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+
+                                    // Hora de ferrar com a vida do adversário
+                                    int maisQuatro = 0;
+                                    for (int c = 0; c < espacosPlayer2.Count; c++) // Procura por espaços vazios na mesa do player 1
+                                    {
+                                        if (!espacosPlayer2[c].Visible) // Se o espaço na posição estiver vazio
+                                        {
+                                            espacosPlayer2[c].Visible = true;
+
+                                            Random random = new Random();
+                                            int aleatorio = (int)random.NextInt64(0, cartas.Count - 1);
+                                            espacosPlayer2[c].Image = cartas[aleatorio].Imagem; // Uma carta aleatória é inserida naquele espaço vazio
+                                            espacosPlayer2[c].Visible = true; // Torna visivel o espaço alugado para colocar carta na mesa
+
+                                            if (c > cartasPlayer2.Count - 1) // Adiciona em um novo espaço na mesa
+                                            {
+                                                cartasPlayer2.Add(cartas[aleatorio]);
+                                            }
+                                            else // Adiciona em uma posição vazia da mesa que não seja uma depois da ultima
+                                            {
+                                                cartasPlayer2[c] = cartas[aleatorio];
+                                            }
+
+                                            cartas.RemoveAt(aleatorio);
+
+
+
+                                            qtdCartasPlayer2++;
+                                            maisQuatro++;
+                                        }
+
+                                        if (maisQuatro == 4)
+                                        {
+                                            using (CuringaMaisQuatro dialog = new CuringaMaisQuatro())
+                                            {
+                                                if (dialog.ShowDialog() == DialogResult.OK) // Pede para o usuário escolher a cor a ser seguida
+                                                {
+                                                    valorCartaAtual = 11;
+                                                    corCartaAtual = dialog.InputValue;
+
+                                                }
+                                            }
+                                            MessageBox.Show("Jogue uma carta de cor " + corCartaAtual);
+                                            break;
+                                        }
+                                    }
+
+                                    // Hora de ferrar com a vida do adverário
+                                }
+                            }
+                            else if (cartasPlayer1[0].Valor == 157) // Se for curinga
+                            {
+                                // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                cartasPlayer1.RemoveAt(0);
+
+                                pbCard1Player1.Image = null;
+                                pbCard1Player1.Visible = false;
+
+                                qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+
+                                using (CuringaMaisQuatro dialog = new CuringaMaisQuatro())
+                                {
+                                    if (dialog.ShowDialog() == DialogResult.OK) // Pede para o usuário escolher a cor a ser seguida
+                                    {
+                                        valorCartaAtual = 11;
+                                        corCartaAtual = dialog.InputValue;
+
+                                    }
+                                }
+
+                                vezPlayer1 = false; // Passa a vez para o próximo
+                                MessageBox.Show("Jogue uma carta de cor " + corCartaAtual);
+
+                            }
+                            else if (cartasPlayer1[0].Valor == valorCartaAtual || cartasPlayer1[0].Cor == corCartaAtual) // Verifica se esta carta bate com a carta do monte de descarte
+                            {
+                                // Verifica se é especial ou comum
+                                if (cartasPlayer1[0].Valor == 22) // Se for +2
+                                {
+                                    // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                    pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                    valorCartaAtual = cartasPlayer1[0].Valor;
+                                    corCartaAtual = cartasPlayer1[0].Cor;
+                                    cartasPlayer1.RemoveAt(0);
+
+                                    pbCard1Player1.Image = null;
+                                    pbCard1Player1.Visible = false;
+
+                                    // Jogador 2 ganha mais 2 cartas
+                                    int maisDuas = 0;
+                                    for (int c = 0; c < espacosPlayer2.Count; c++) // Procura por espaços vazios na mesa do player 1
+                                    {
+                                        if (!espacosPlayer2[c].Visible) // Se o espaço na posição estiver vazio
+                                        {
+                                            espacosPlayer2[c].Visible = true;
+
+                                            Random random = new Random();
+                                            int aleatorio = (int)random.NextInt64(0, cartas.Count - 1);
+                                            espacosPlayer2[c].Image = cartas[aleatorio].Imagem; // Uma carta aleatória é inserida naquele espaço vazio
+                                            espacosPlayer2[c].Visible = true; // Torna visivel o espaço alugado para colocar carta na mesa
+
+                                            if (c > cartasPlayer2.Count - 1) // Adiciona em um novo espaço na mesa
+                                            {
+                                                cartasPlayer2.Add(cartas[aleatorio]);
+                                            }
+                                            else // Adiciona em uma posição vazia da mesa que não seja uma depois da ultima
+                                            {
+                                                cartasPlayer2[c] = cartas[aleatorio];
+                                            }
+
+                                            cartas.RemoveAt(aleatorio);
+
+
+
+                                            qtdCartasPlayer2++;
+                                            maisDuas++;
+                                        }
+
+                                        if (maisDuas == 2)
+                                        {
+                                            MessageBox.Show("Jogue uma carta de cor " + corCartaAtual);
+                                            break;
+                                        }
+                                    }
+                                    // Jogador 2 ganha mais 2 cartas
+
+
+                                    qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+                                    MessageBox.Show("Jogador 2 perdeu a vez!");
+                                }
+                                else if (cartasPlayer1[0].Valor == 24) // Se for pular
+                                {
+                                    // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                    pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                    valorCartaAtual = cartasPlayer1[0].Valor;
+                                    corCartaAtual = cartasPlayer1[0].Cor;
+                                    cartasPlayer1.RemoveAt(0);
+
+                                    pbCard1Player1.Image = null;
+                                    pbCard1Player1.Visible = false;
+
+                                    qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+                                    MessageBox.Show("Jogador 2 perdeu a vez!");
+                                }
+                                else // Se for carta comum
+                                {
+                                    // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                    pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                    valorCartaAtual = cartasPlayer1[0].Valor;
+                                    corCartaAtual = cartasPlayer1[0].Cor;
+                                    cartasPlayer1.RemoveAt(0);
+
+                                    pbCard1Player1.Image = null;
+                                    pbCard1Player1.Visible = false;
+
+                                    qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+
+                                    vezPlayer1 = false; // Passa a vez para o próximo
+                                }
+
+
+                                if (qtdCartasPlayer1 == 0)
+                                {
+                                    fimRodada = true;
+                                    MessageBox.Show("Fim de jogo. Jogador 1 venceu!");
+                                }
+
+                                if (primeiraJogada)
+                                {
+                                    primeiraJogada = false;
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Você não pode jogar esta carta!");
+                            }
+                        }
+                    }
+                    else // SE NENHUM JOGADOR TIVER FEITO COMPRAS
+                    {
+
+                        // Verifica se a carta é curinga antes de verificar a cor e o valor
+                        if (cartasPlayer1[0].Valor == 44) // Se for curinga +4
+                        {
+                            bool verificarCuringaMais4 = false;
+                            for (int c = 0; c <= cartasPlayer1.Count - 1; c++) // Verificar se tenho uma carta da mesma cor da carta do monte de descarte
+                            {
+                                if (cartasPlayer1[c].Cor == corCartaAtual) // Se a cor da carta que tenho for igual a carta do monte
+                                {
+                                    verificarCuringaMais4 = true;
+                                    break;
+                                }
+                            }
+
+                            if (verificarCuringaMais4) // Se tiver carta de mesma cor do monte, não posso jogar
+                            {
+                                MessageBox.Show("Você não pode jogar esta carta agora!");
+                            }
+                            else // Se não tiver carta de mesma cor, posso jogar, o adversario perde a vez e ganha 4 cartas
+                            {
+
+                                // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                cartasPlayer1.RemoveAt(0);
+
+                                pbCard1Player1.Image = null;
+                                pbCard1Player1.Visible = false;
+
+                                qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+
+                                // Hora de ferrar com a vida do adversário
+                                int maisQuatro = 0;
+                                for (int c = 0; c < espacosPlayer2.Count; c++) // Procura por espaços vazios na mesa do player 1
+                                {
+                                    if (!espacosPlayer2[c].Visible) // Se o espaço na posição estiver vazio
+                                    {
+                                        espacosPlayer2[c].Visible = true;
+
+                                        Random random = new Random();
+                                        int aleatorio = (int)random.NextInt64(0, cartas.Count - 1);
+                                        espacosPlayer2[c].Image = cartas[aleatorio].Imagem; // Uma carta aleatória é inserida naquele espaço vazio
+                                        espacosPlayer2[c].Visible = true; // Torna visivel o espaço alugado para colocar carta na mesa
+
+                                        if (c > cartasPlayer2.Count - 1) // Adiciona em um novo espaço na mesa
+                                        {
+                                            cartasPlayer2.Add(cartas[aleatorio]);
+                                        }
+                                        else // Adiciona em uma posição vazia da mesa que não seja uma depois da ultima
+                                        {
+                                            cartasPlayer2[c] = cartas[aleatorio];
+                                        }
+
+                                        cartas.RemoveAt(aleatorio);
+
+
+
+                                        qtdCartasPlayer2++;
+                                        maisQuatro++;
+                                    }
+
+                                    if (maisQuatro == 4)
+                                    {
+                                        using (CuringaMaisQuatro dialog = new CuringaMaisQuatro())
+                                        {
+                                            if (dialog.ShowDialog() == DialogResult.OK) // Pede para o usuário escolher a cor a ser seguida
+                                            {
+                                                valorCartaAtual = 11;
+                                                corCartaAtual = dialog.InputValue;
+
+                                            }
+                                        }
+                                        MessageBox.Show("Jogue uma carta de cor " + corCartaAtual);
+                                        break;
+                                    }
+                                }
+
+                                // Hora de ferrar com a vida do adverário
+                            }
+                        }
+                        else if (cartasPlayer1[0].Valor == 157) // Se for curinga
+                        {
+                            // Coloca a carta no monte de descarte e remove das cartas do jogador
+                            pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                            cartasPlayer1.RemoveAt(0);
+
+                            pbCard1Player1.Image = null;
+                            pbCard1Player1.Visible = false;
+
+                            qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+
+                            using (CuringaMaisQuatro dialog = new CuringaMaisQuatro())
+                            {
+                                if (dialog.ShowDialog() == DialogResult.OK) // Pede para o usuário escolher a cor a ser seguida
+                                {
+                                    valorCartaAtual = 11;
+                                    corCartaAtual = dialog.InputValue;
+
+                                }
+                            }
+
+                            vezPlayer1 = false; // Passa a vez para o próximo
+                            MessageBox.Show("Jogue uma carta de cor " + corCartaAtual);
+
+                        }
+                        else if (cartasPlayer1[0].Valor == valorCartaAtual || cartasPlayer1[0].Cor == corCartaAtual) // Verifica se esta carta bate com a carta do monte de descarte
+                        {
+                            // Verifica se é especial ou comum
+                            if (cartasPlayer1[0].Valor == 22) // Se for +2
+                            {
+                                // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                valorCartaAtual = cartasPlayer1[0].Valor;
+                                corCartaAtual = cartasPlayer1[0].Cor;
+                                cartasPlayer1.RemoveAt(0);
+
+                                pbCard1Player1.Image = null;
+                                pbCard1Player1.Visible = false;
+
+                                // Jogador 2 ganha mais 2 cartas
+                                int maisDuas = 0;
+                                for (int c = 0; c < espacosPlayer2.Count; c++) // Procura por espaços vazios na mesa do player 1
+                                {
+                                    if (!espacosPlayer2[c].Visible) // Se o espaço na posição estiver vazio
+                                    {
+                                        espacosPlayer2[c].Visible = true;
+
+                                        Random random = new Random();
+                                        int aleatorio = (int)random.NextInt64(0, cartas.Count - 1);
+                                        espacosPlayer2[c].Image = cartas[aleatorio].Imagem; // Uma carta aleatória é inserida naquele espaço vazio
+                                        espacosPlayer2[c].Visible = true; // Torna visivel o espaço alugado para colocar carta na mesa
+
+                                        if (c > cartasPlayer2.Count - 1) // Adiciona em um novo espaço na mesa
+                                        {
+                                            cartasPlayer2.Add(cartas[aleatorio]);
+                                        }
+                                        else // Adiciona em uma posição vazia da mesa que não seja uma depois da ultima
+                                        {
+                                            cartasPlayer2[c] = cartas[aleatorio];
+                                        }
+
+                                        cartas.RemoveAt(aleatorio);
+
+
+
+                                        qtdCartasPlayer2++;
+                                        maisDuas++;
+                                    }
+
+                                    if (maisDuas == 2)
+                                    {
+                                        MessageBox.Show("Jogue uma carta de cor " + corCartaAtual);
+                                        break;
+                                    }
+                                }
+                                // Jogador 2 ganha mais 2 cartas
+
+
+                                qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+                                MessageBox.Show("Jogador 2 perdeu a vez!");
+                            }
+                            else if (cartasPlayer1[0].Valor == 24) // Se for pular
+                            {
+                                // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                valorCartaAtual = cartasPlayer1[0].Valor;
+                                corCartaAtual = cartasPlayer1[0].Cor;
+                                cartasPlayer1.RemoveAt(0);
+
+                                pbCard1Player1.Image = null;
+                                pbCard1Player1.Visible = false;
+
+                                qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+                                MessageBox.Show("Jogador 2 perdeu a vez!");
+                            }
+                            else // Se for carta comum
+                            {
+                                // Coloca a carta no monte de descarte e remove das cartas do jogador
+                                pbMonteDescarte.Image = cartasPlayer1[0].Imagem;
+                                valorCartaAtual = cartasPlayer1[0].Valor;
+                                corCartaAtual = cartasPlayer1[0].Cor;
+                                cartasPlayer1.RemoveAt(0);
+
+                                pbCard1Player1.Image = null;
+                                pbCard1Player1.Visible = false;
+
+                                qtdCartasPlayer1--; // Diminui a quantidade de cartas do jogador
+
+                                vezPlayer1 = false; // Passa a vez para o próximo
+                            }
+
+
+                            if (qtdCartasPlayer1 == 0)
+                            {
+                                fimRodada = true;
+                                MessageBox.Show("Fim de jogo. Jogador 1 venceu!");
+                            }
+
+                            if (primeiraJogada)
+                            {
+                                primeiraJogada = false;
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Você não pode jogar esta carta!");
+                        }
+                    }
+
+                }
+            }
+        }
+
+        private void btnPassaVez_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
