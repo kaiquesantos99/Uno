@@ -67,6 +67,7 @@
             pbCard29Player2 = new PictureBox();
             pbCard30Player2 = new PictureBox();
             panel1 = new Panel();
+            btnPassaVez = new Button();
             pbMonteDescarte = new PictureBox();
             pbMonteCompras = new PictureBox();
             tableLayoutPanel3 = new TableLayoutPanel();
@@ -100,7 +101,6 @@
             pbCard28Player1 = new PictureBox();
             pbCard29Player1 = new PictureBox();
             pbCard30Player1 = new PictureBox();
-            btnPassaVez = new Button();
             ((System.ComponentModel.ISupportInitialize)pbAvatar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbAvatar2).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -406,6 +406,7 @@
             pbCard2Player2.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard2Player2.TabIndex = 0;
             pbCard2Player2.TabStop = false;
+            pbCard2Player2.Click += pbCard2Player2_Click;
             // 
             // pbCard4Player2
             // 
@@ -484,6 +485,7 @@
             pbCard17Player2.TabIndex = 16;
             pbCard17Player2.TabStop = false;
             pbCard17Player2.Visible = false;
+            pbCard17Player2.Click += pbCard17Player2_Click;
             // 
             // pbCard18Player2
             // 
@@ -625,6 +627,16 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(763, 415);
             panel1.TabIndex = 6;
+            // 
+            // btnPassaVez
+            // 
+            btnPassaVez.Location = new Point(564, 34);
+            btnPassaVez.Name = "btnPassaVez";
+            btnPassaVez.Size = new Size(75, 23);
+            btnPassaVez.TabIndex = 7;
+            btnPassaVez.Text = "Passar Vez";
+            btnPassaVez.UseVisualStyleBackColor = true;
+            btnPassaVez.Click += btnPassaVez_Click;
             // 
             // pbMonteDescarte
             // 
@@ -841,6 +853,7 @@
             pbCard3Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard3Player1.TabIndex = 2;
             pbCard3Player1.TabStop = false;
+            pbCard3Player1.Click += pbCard3Player1_Click;
             // 
             // pbCard2Player1
             // 
@@ -851,6 +864,7 @@
             pbCard2Player1.SizeMode = PictureBoxSizeMode.Zoom;
             pbCard2Player1.TabIndex = 1;
             pbCard2Player1.TabStop = false;
+            pbCard2Player1.Click += pbCard2Player1_Click;
             // 
             // pbCard1Player1
             // 
@@ -873,6 +887,7 @@
             pbCard16Player1.TabIndex = 15;
             pbCard16Player1.TabStop = false;
             pbCard16Player1.Visible = false;
+            pbCard16Player1.Click += pbCard16Player1_Click;
             // 
             // pbCard17Player1
             // 
@@ -1027,16 +1042,6 @@
             pbCard30Player1.TabIndex = 29;
             pbCard30Player1.TabStop = false;
             pbCard30Player1.Visible = false;
-            // 
-            // btnPassaVez
-            // 
-            btnPassaVez.Location = new Point(564, 34);
-            btnPassaVez.Name = "btnPassaVez";
-            btnPassaVez.Size = new Size(75, 23);
-            btnPassaVez.TabIndex = 7;
-            btnPassaVez.Text = "Passar Vez";
-            btnPassaVez.UseVisualStyleBackColor = true;
-            btnPassaVez.Click += btnPassaVez_Click;
             // 
             // Uno
             // 
