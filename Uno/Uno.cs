@@ -7277,5 +7277,14 @@ namespace Uno
                 }
             }
         }
+
+        private void btnVerificar_Click(object sender, EventArgs e)
+        {
+
+            MessageBox.Show("Valor carta atual: " + valorCartaAtual);
+            MessageBox.Show("Cor carta atual: " + corCartaAtual);
+            MessageBox.Show("valor carta comprada " + valorCartaComprada);
+            MessageBox.Show("cor carta comprada " + corCartaComprada);
+        }
     }
 }

@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Kaique\\source\\repos\\Uno\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|c:\\users\\kaique\\source\\repos\\uno\\uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|C:\\Users\\Kaique\\source\\repos\\Uno\\uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|C:\\Users\\Kaique\\source\\repos\\Uno\\uno\\curingamaisquatro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|c:\\users\\kaique\\source\\repos\\uno\\uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\uno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|c:\\users\\kaique\\source\\repos\\uno\\uno\\curingamaisquatro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{656A564E-BB26-4787-B3B7-C9A19FDCA0DA}|Uno\\Uno.csproj|solutionrelative:uno\\curingamaisquatro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,8 +46,7 @@
               "RelativeToolTip": "Uno\\Classes\\Card.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T02:54:46.238Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-11T02:54:46.238Z"
             },
             {
               "$type": "Document",
@@ -76,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Uno.cs [Projeto]",
               "DocumentMoniker": "C:\\Users\\Kaique\\source\\repos\\Uno\\Uno\\Uno.cs",
               "RelativeDocumentMoniker": "Uno\\Uno.cs",
@@ -88,13 +87,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Uno.cs",
               "DocumentMoniker": "C:\\Users\\Kaique\\source\\repos\\Uno\\Uno\\Uno.cs",
               "RelativeDocumentMoniker": "Uno\\Uno.cs",
               "ToolTip": "C:\\Users\\Kaique\\source\\repos\\Uno\\Uno\\Uno.cs",
               "RelativeToolTip": "Uno\\Uno.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAuwEYAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAGgcAAAAAAAAAAAIwHEcAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-11T02:54:36.665Z",
               "EditorCaption": ""

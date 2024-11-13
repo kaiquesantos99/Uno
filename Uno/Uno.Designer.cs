@@ -100,6 +100,7 @@
             pbCard28Player1 = new PictureBox();
             pbCard29Player1 = new PictureBox();
             pbCard30Player1 = new PictureBox();
+            btnVerificar = new Button();
             ((System.ComponentModel.ISupportInitialize)pbAvatar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbAvatar2).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -618,6 +619,7 @@
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(btnVerificar);
             panel1.Controls.Add(btnPassaVez);
             panel1.Controls.Add(pbMonteDescarte);
             panel1.Controls.Add(pbMonteCompras);
@@ -1050,6 +1052,16 @@
             pbCard30Player1.TabStop = false;
             pbCard30Player1.Visible = false;
             // 
+            // btnVerificar
+            // 
+            btnVerificar.Location = new Point(492, 81);
+            btnVerificar.Name = "btnVerificar";
+            btnVerificar.Size = new Size(75, 23);
+            btnVerificar.TabIndex = 8;
+            btnVerificar.Text = "Verificar";
+            btnVerificar.UseVisualStyleBackColor = true;
+            btnVerificar.Click += btnVerificar_Click;
+            // 
             // Uno
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1207,5 +1219,6 @@
         private PictureBox pbCard29Player1;
         private PictureBox pbCard30Player1;
         private Button btnPassaVez;
+        private Button btnVerificar;
     }
 }
