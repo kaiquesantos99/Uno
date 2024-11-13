@@ -100,7 +100,6 @@
             pbCard28Player1 = new PictureBox();
             pbCard29Player1 = new PictureBox();
             pbCard30Player1 = new PictureBox();
-            btnVerificar = new Button();
             ((System.ComponentModel.ISupportInitialize)pbAvatar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbAvatar2).BeginInit();
             tableLayoutPanel1.SuspendLayout();
@@ -176,9 +175,9 @@
             lblPlayer1.AutoSize = true;
             lblPlayer1.Dock = DockStyle.Fill;
             lblPlayer1.Font = new Font("Arial", 14.25F, FontStyle.Bold);
-            lblPlayer1.Location = new Point(113, 20);
+            lblPlayer1.Location = new Point(93, 0);
             lblPlayer1.Name = "lblPlayer1";
-            lblPlayer1.Size = new Size(187, 154);
+            lblPlayer1.Size = new Size(194, 154);
             lblPlayer1.TabIndex = 0;
             lblPlayer1.Text = "Player 1";
             lblPlayer1.TextAlign = ContentAlignment.MiddleLeft;
@@ -188,9 +187,9 @@
             // 
             lblPlayer2.Dock = DockStyle.Fill;
             lblPlayer2.Font = new Font("Arial", 14.25F, FontStyle.Bold);
-            lblPlayer2.Location = new Point(1049, 555);
+            lblPlayer2.Location = new Point(1062, 575);
             lblPlayer2.Name = "lblPlayer2";
-            lblPlayer2.Size = new Size(187, 154);
+            lblPlayer2.Size = new Size(194, 154);
             lblPlayer2.TabIndex = 1;
             lblPlayer2.Text = "Player 2";
             lblPlayer2.TextAlign = ContentAlignment.MiddleRight;
@@ -198,7 +197,7 @@
             // pbAvatar1
             // 
             pbAvatar1.Dock = DockStyle.Fill;
-            pbAvatar1.Location = new Point(23, 23);
+            pbAvatar1.Location = new Point(3, 3);
             pbAvatar1.Name = "pbAvatar1";
             pbAvatar1.Size = new Size(84, 148);
             pbAvatar1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -209,7 +208,7 @@
             // pbAvatar2
             // 
             pbAvatar2.Dock = DockStyle.Fill;
-            pbAvatar2.Location = new Point(1242, 558);
+            pbAvatar2.Location = new Point(1262, 578);
             pbAvatar2.Name = "pbAvatar2";
             pbAvatar2.Size = new Size(85, 148);
             pbAvatar2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -235,7 +234,6 @@
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.Padding = new Padding(20);
             tableLayoutPanel1.RowCount = 3;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 154F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
@@ -294,12 +292,12 @@
             tlpMesaPlayer2.Controls.Add(pbCard29Player2, 13, 1);
             tlpMesaPlayer2.Controls.Add(pbCard30Player2, 14, 1);
             tlpMesaPlayer2.Dock = DockStyle.Fill;
-            tlpMesaPlayer2.Location = new Point(306, 558);
+            tlpMesaPlayer2.Location = new Point(293, 578);
             tlpMesaPlayer2.Name = "tlpMesaPlayer2";
             tlpMesaPlayer2.RowCount = 2;
             tlpMesaPlayer2.RowStyles.Add(new RowStyle(SizeType.Absolute, 74F));
             tlpMesaPlayer2.RowStyles.Add(new RowStyle(SizeType.Absolute, 74F));
-            tlpMesaPlayer2.Size = new Size(737, 148);
+            tlpMesaPlayer2.Size = new Size(763, 148);
             tlpMesaPlayer2.TabIndex = 5;
             tlpMesaPlayer2.Visible = false;
             // 
@@ -313,6 +311,7 @@
             pbCard15Player2.TabIndex = 14;
             pbCard15Player2.TabStop = false;
             pbCard15Player2.Visible = false;
+            pbCard15Player2.Click += pbCard15Player2_Click;
             // 
             // pbCard13Player2
             // 
@@ -324,6 +323,7 @@
             pbCard13Player2.TabIndex = 13;
             pbCard13Player2.TabStop = false;
             pbCard13Player2.Visible = false;
+            pbCard13Player2.Click += pbCard13Player2_Click;
             // 
             // pbCard11Player2
             // 
@@ -335,6 +335,7 @@
             pbCard11Player2.TabIndex = 12;
             pbCard11Player2.TabStop = false;
             pbCard11Player2.Visible = false;
+            pbCard11Player2.Click += pbCard11Player2_Click;
             // 
             // pbCard9Player2
             // 
@@ -346,6 +347,7 @@
             pbCard9Player2.TabIndex = 11;
             pbCard9Player2.TabStop = false;
             pbCard9Player2.Visible = false;
+            pbCard9Player2.Click += pbCard9Player2_Click;
             // 
             // pbCard7Player2
             // 
@@ -433,6 +435,7 @@
             pbCard8Player2.TabIndex = 2;
             pbCard8Player2.TabStop = false;
             pbCard8Player2.Visible = false;
+            pbCard8Player2.Click += pbCard8Player2_Click;
             // 
             // pbCard10Player2
             // 
@@ -443,6 +446,7 @@
             pbCard10Player2.TabIndex = 4;
             pbCard10Player2.TabStop = false;
             pbCard10Player2.Visible = false;
+            pbCard10Player2.Click += pbCard10Player2_Click;
             // 
             // pbCard12Player2
             // 
@@ -453,6 +457,7 @@
             pbCard12Player2.TabIndex = 5;
             pbCard12Player2.TabStop = false;
             pbCard12Player2.Visible = false;
+            pbCard12Player2.Click += pbCard12Player2_Click;
             // 
             // pbCard14Player2
             // 
@@ -463,6 +468,7 @@
             pbCard14Player2.TabIndex = 6;
             pbCard14Player2.TabStop = false;
             pbCard14Player2.Visible = false;
+            pbCard14Player2.Click += pbCard14Player2_Click;
             // 
             // pbCard16Player2
             // 
@@ -473,6 +479,7 @@
             pbCard16Player2.TabIndex = 15;
             pbCard16Player2.TabStop = false;
             pbCard16Player2.Visible = false;
+            pbCard16Player2.Click += pbCard16Player2_Click;
             // 
             // pbCard17Player2
             // 
@@ -494,6 +501,7 @@
             pbCard18Player2.TabIndex = 17;
             pbCard18Player2.TabStop = false;
             pbCard18Player2.Visible = false;
+            pbCard18Player2.Click += pbCard18Player2_Click;
             // 
             // pbCard19Player2
             // 
@@ -504,6 +512,7 @@
             pbCard19Player2.TabIndex = 18;
             pbCard19Player2.TabStop = false;
             pbCard19Player2.Visible = false;
+            pbCard19Player2.Click += pbCard19Player2_Click;
             // 
             // pbCard20Player2
             // 
@@ -514,6 +523,7 @@
             pbCard20Player2.TabIndex = 19;
             pbCard20Player2.TabStop = false;
             pbCard20Player2.Visible = false;
+            pbCard20Player2.Click += pbCard20Player2_Click;
             // 
             // pbCard21Player2
             // 
@@ -524,6 +534,7 @@
             pbCard21Player2.TabIndex = 20;
             pbCard21Player2.TabStop = false;
             pbCard21Player2.Visible = false;
+            pbCard21Player2.Click += pbCard21Player2_Click;
             // 
             // pbCard22Player2
             // 
@@ -534,6 +545,7 @@
             pbCard22Player2.TabIndex = 21;
             pbCard22Player2.TabStop = false;
             pbCard22Player2.Visible = false;
+            pbCard22Player2.Click += pbCard22Player2_Click;
             // 
             // pbCard23Player2
             // 
@@ -544,6 +556,7 @@
             pbCard23Player2.TabIndex = 22;
             pbCard23Player2.TabStop = false;
             pbCard23Player2.Visible = false;
+            pbCard23Player2.Click += pbCard23Player2_Click;
             // 
             // pbCard24Player2
             // 
@@ -554,6 +567,7 @@
             pbCard24Player2.TabIndex = 23;
             pbCard24Player2.TabStop = false;
             pbCard24Player2.Visible = false;
+            pbCard24Player2.Click += pbCard24Player2_Click;
             // 
             // pbCard25Player2
             // 
@@ -564,6 +578,7 @@
             pbCard25Player2.TabIndex = 24;
             pbCard25Player2.TabStop = false;
             pbCard25Player2.Visible = false;
+            pbCard25Player2.Click += pbCard25Player2_Click;
             // 
             // pbCard26Player2
             // 
@@ -574,6 +589,7 @@
             pbCard26Player2.TabIndex = 25;
             pbCard26Player2.TabStop = false;
             pbCard26Player2.Visible = false;
+            pbCard26Player2.Click += pbCard26Player2_Click;
             // 
             // pbCard27Player2
             // 
@@ -584,6 +600,7 @@
             pbCard27Player2.TabIndex = 26;
             pbCard27Player2.TabStop = false;
             pbCard27Player2.Visible = false;
+            pbCard27Player2.Click += pbCard27Player2_Click;
             // 
             // pbCard28Player2
             // 
@@ -594,6 +611,7 @@
             pbCard28Player2.TabIndex = 27;
             pbCard28Player2.TabStop = false;
             pbCard28Player2.Visible = false;
+            pbCard28Player2.Click += pbCard28Player2_Click;
             // 
             // pbCard29Player2
             // 
@@ -604,6 +622,7 @@
             pbCard29Player2.TabIndex = 28;
             pbCard29Player2.TabStop = false;
             pbCard29Player2.Visible = false;
+            pbCard29Player2.Click += pbCard29Player2_Click;
             // 
             // pbCard30Player2
             // 
@@ -614,19 +633,19 @@
             pbCard30Player2.TabIndex = 29;
             pbCard30Player2.TabStop = false;
             pbCard30Player2.Visible = false;
+            pbCard30Player2.Click += pbCard30Player2_Click;
             // 
             // panel1
             // 
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
-            panel1.Controls.Add(btnVerificar);
             panel1.Controls.Add(btnPassaVez);
             panel1.Controls.Add(pbMonteDescarte);
             panel1.Controls.Add(pbMonteCompras);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(306, 177);
+            panel1.Location = new Point(293, 157);
             panel1.Name = "panel1";
-            panel1.Size = new Size(737, 375);
+            panel1.Size = new Size(763, 415);
             panel1.TabIndex = 6;
             // 
             // btnPassaVez
@@ -712,12 +731,12 @@
             tlpMesaPlayer1.Controls.Add(pbCard29Player1, 13, 1);
             tlpMesaPlayer1.Controls.Add(pbCard30Player1, 14, 1);
             tlpMesaPlayer1.Dock = DockStyle.Fill;
-            tlpMesaPlayer1.Location = new Point(306, 23);
+            tlpMesaPlayer1.Location = new Point(293, 3);
             tlpMesaPlayer1.Name = "tlpMesaPlayer1";
             tlpMesaPlayer1.RowCount = 2;
             tlpMesaPlayer1.RowStyles.Add(new RowStyle(SizeType.Absolute, 74F));
             tlpMesaPlayer1.RowStyles.Add(new RowStyle(SizeType.Absolute, 74F));
-            tlpMesaPlayer1.Size = new Size(737, 148);
+            tlpMesaPlayer1.Size = new Size(763, 148);
             tlpMesaPlayer1.TabIndex = 7;
             tlpMesaPlayer1.Visible = false;
             // 
@@ -731,6 +750,7 @@
             pbCard15Player1.TabIndex = 14;
             pbCard15Player1.TabStop = false;
             pbCard15Player1.Visible = false;
+            pbCard15Player1.Click += pbCard15Player1_Click;
             // 
             // pbCard14Player1
             // 
@@ -742,6 +762,7 @@
             pbCard14Player1.TabIndex = 13;
             pbCard14Player1.TabStop = false;
             pbCard14Player1.Visible = false;
+            pbCard14Player1.Click += pbCard14Player1_Click;
             // 
             // pbCard13Player1
             // 
@@ -753,6 +774,7 @@
             pbCard13Player1.TabIndex = 12;
             pbCard13Player1.TabStop = false;
             pbCard13Player1.Visible = false;
+            pbCard13Player1.Click += pbCard13Player1_Click;
             // 
             // pbCard12Player1
             // 
@@ -764,6 +786,7 @@
             pbCard12Player1.TabIndex = 11;
             pbCard12Player1.TabStop = false;
             pbCard12Player1.Visible = false;
+            pbCard12Player1.Click += pbCard12Player1_Click;
             // 
             // pbCard11Player1
             // 
@@ -775,6 +798,7 @@
             pbCard11Player1.TabIndex = 10;
             pbCard11Player1.TabStop = false;
             pbCard11Player1.Visible = false;
+            pbCard11Player1.Click += pbCard11Player1_Click;
             // 
             // pbCard10Player1
             // 
@@ -786,6 +810,7 @@
             pbCard10Player1.TabIndex = 9;
             pbCard10Player1.TabStop = false;
             pbCard10Player1.Visible = false;
+            pbCard10Player1.Click += pbCard10Player1_Click;
             // 
             // pbCard9Player1
             // 
@@ -797,6 +822,7 @@
             pbCard9Player1.TabIndex = 8;
             pbCard9Player1.TabStop = false;
             pbCard9Player1.Visible = false;
+            pbCard9Player1.Click += pbCard9Player1_Click;
             // 
             // pbCard8Player1
             // 
@@ -808,6 +834,7 @@
             pbCard8Player1.TabIndex = 7;
             pbCard8Player1.TabStop = false;
             pbCard8Player1.Visible = false;
+            pbCard8Player1.Click += pbCard8Player1_Click;
             // 
             // pbCard7Player1
             // 
@@ -908,6 +935,7 @@
             pbCard17Player1.TabIndex = 16;
             pbCard17Player1.TabStop = false;
             pbCard17Player1.Visible = false;
+            pbCard17Player1.Click += pbCard17Player1_Click;
             // 
             // pbCard18Player1
             // 
@@ -919,6 +947,7 @@
             pbCard18Player1.TabIndex = 17;
             pbCard18Player1.TabStop = false;
             pbCard18Player1.Visible = false;
+            pbCard18Player1.Click += pbCard18Player1_Click;
             // 
             // pbCard19Player1
             // 
@@ -930,6 +959,7 @@
             pbCard19Player1.TabIndex = 18;
             pbCard19Player1.TabStop = false;
             pbCard19Player1.Visible = false;
+            pbCard19Player1.Click += pbCard19Player1_Click;
             // 
             // pbCard20Player1
             // 
@@ -941,6 +971,7 @@
             pbCard20Player1.TabIndex = 19;
             pbCard20Player1.TabStop = false;
             pbCard20Player1.Visible = false;
+            pbCard20Player1.Click += pbCard20Player1_Click;
             // 
             // pbCard21Player1
             // 
@@ -952,6 +983,7 @@
             pbCard21Player1.TabIndex = 20;
             pbCard21Player1.TabStop = false;
             pbCard21Player1.Visible = false;
+            pbCard21Player1.Click += pbCard21Player1_Click;
             // 
             // pbCard22Player1
             // 
@@ -963,6 +995,7 @@
             pbCard22Player1.TabIndex = 21;
             pbCard22Player1.TabStop = false;
             pbCard22Player1.Visible = false;
+            pbCard22Player1.Click += pbCard22Player1_Click;
             // 
             // pbCard23Player1
             // 
@@ -974,6 +1007,7 @@
             pbCard23Player1.TabIndex = 22;
             pbCard23Player1.TabStop = false;
             pbCard23Player1.Visible = false;
+            pbCard23Player1.Click += pbCard23Player1_Click;
             // 
             // pbCard24Player1
             // 
@@ -985,6 +1019,7 @@
             pbCard24Player1.TabIndex = 23;
             pbCard24Player1.TabStop = false;
             pbCard24Player1.Visible = false;
+            pbCard24Player1.Click += pbCard24Player1_Click;
             // 
             // pbCard25Player1
             // 
@@ -996,6 +1031,7 @@
             pbCard25Player1.TabIndex = 24;
             pbCard25Player1.TabStop = false;
             pbCard25Player1.Visible = false;
+            pbCard25Player1.Click += pbCard25Player1_Click;
             // 
             // pbCard26Player1
             // 
@@ -1007,6 +1043,7 @@
             pbCard26Player1.TabIndex = 25;
             pbCard26Player1.TabStop = false;
             pbCard26Player1.Visible = false;
+            pbCard26Player1.Click += pbCard26Player1_Click;
             // 
             // pbCard27Player1
             // 
@@ -1018,6 +1055,7 @@
             pbCard27Player1.TabIndex = 26;
             pbCard27Player1.TabStop = false;
             pbCard27Player1.Visible = false;
+            pbCard27Player1.Click += pbCard27Player1_Click;
             // 
             // pbCard28Player1
             // 
@@ -1029,6 +1067,7 @@
             pbCard28Player1.TabIndex = 27;
             pbCard28Player1.TabStop = false;
             pbCard28Player1.Visible = false;
+            pbCard28Player1.Click += pbCard28Player1_Click;
             // 
             // pbCard29Player1
             // 
@@ -1040,6 +1079,7 @@
             pbCard29Player1.TabIndex = 28;
             pbCard29Player1.TabStop = false;
             pbCard29Player1.Visible = false;
+            pbCard29Player1.Click += pbCard29Player1_Click;
             // 
             // pbCard30Player1
             // 
@@ -1051,16 +1091,7 @@
             pbCard30Player1.TabIndex = 29;
             pbCard30Player1.TabStop = false;
             pbCard30Player1.Visible = false;
-            // 
-            // btnVerificar
-            // 
-            btnVerificar.Location = new Point(492, 81);
-            btnVerificar.Name = "btnVerificar";
-            btnVerificar.Size = new Size(75, 23);
-            btnVerificar.TabIndex = 8;
-            btnVerificar.Text = "Verificar";
-            btnVerificar.UseVisualStyleBackColor = true;
-            btnVerificar.Click += btnVerificar_Click;
+            pbCard30Player1.Click += pbCard30Player1_Click;
             // 
             // Uno
             // 
@@ -1219,6 +1250,5 @@
         private PictureBox pbCard29Player1;
         private PictureBox pbCard30Player1;
         private Button btnPassaVez;
-        private Button btnVerificar;
     }
 }

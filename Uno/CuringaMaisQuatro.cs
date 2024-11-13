@@ -26,7 +26,7 @@ namespace Uno
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+
             if (rbRed.Checked)
             {
                 resultado = "Vermelho";
@@ -52,7 +52,16 @@ namespace Uno
                 MessageBox.Show("Escolha uma cor e clique em confirmar!");
             }
 
-            
+
+        }
+
+        private void rbRed_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
