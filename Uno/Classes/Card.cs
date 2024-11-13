@@ -12,5 +12,6 @@ namespace Uno.Classes
         public int Valor { get; set; }
         public Image Imagem { get; set; }
 
+
     }
 }
